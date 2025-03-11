@@ -2,6 +2,22 @@
 
 Simple LND REST client used for exporting metrics from Lightning Node to Prometheus.  Built with the purpose of being used by [warnet](https://github.com/bitcoin-dev-project/warnet?tab=readme-ov-file#warnet) for collecting statistics during simulations.
 
+## Building docker image
+
+```
+% make container
+% make push
+```
+
+*Note: docker images should be published from linux to be more compatible with other architectures like amd/mac*
+
+```
+kubernetes-logs:
+events: Back-off restarting failed container lnd-exporter in pod
+stern_logs: tank-0001-ln lnd-exporter exec /usr/local/bin/python: exec format error
+WARNING: The requested image's platform (linux/arm64/v8) does not match the detected host platform (linux/amd64/v3) and no specific platform was requested
+```
+
 ## Configuration
 
 The following configurations can be overridden via system environment variables:
