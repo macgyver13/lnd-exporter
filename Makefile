@@ -1,5 +1,5 @@
 PREFIX = bitdonkey/lnd-exporter
-TAG = 0.1.2
+TAG = 0.1.3
 
 BUILD_DIR = build_output
 
